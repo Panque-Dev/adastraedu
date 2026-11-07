@@ -1,0 +1,3 @@
+[build]
+  command = "node worker/scripts/build-pages.mjs"
+  publish = ".pages-dist"

@@ -1,0 +1,234 @@
+.ad-astra-chat {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 10000;
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+}
+
+.ad-astra-chat__toggle {
+    min-height: 56px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 999px;
+    background: #2b2156;
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(43, 33, 86, .28);
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ad-astra-chat__toggle:hover,
+.ad-astra-chat__send:hover {
+    background: #493879;
+}
+
+.ad-astra-chat__send:disabled {
+    opacity: .65;
+    cursor: wait;
+}
+
+.ad-astra-chat__panel {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    width: min(370px, calc(100vw - 32px));
+    height: min(540px, calc(100dvh - 125px));
+    min-height: 340px;
+    overflow: hidden;
+    border: 1px solid rgba(43, 33, 86, .14);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 18px 55px rgba(30, 22, 62, .24);
+}
+
+.ad-astra-chat__panel[hidden] {
+    display: none;
+}
+
+.ad-astra-chat__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 18px;
+    background: #2b2156;
+    color: #fff;
+}
+
+.ad-astra-chat__heading {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.ad-astra-chat__status {
+    display: block;
+    margin-top: 4px;
+    color: #e7e1f5;
+    font-size: 11px;
+}
+
+.ad-astra-chat__close {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.ad-astra-chat__messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    background: #f8f7fb;
+}
+
+.ad-astra-chat__message {
+    width: fit-content;
+    max-width: 88%;
+    margin: 0 0 12px;
+    padding: 11px 13px;
+    border-radius: 14px 14px 14px 4px;
+    background: #fff;
+    color: #30284b;
+    box-shadow: 0 2px 8px rgba(43, 33, 86, .08);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+.ad-astra-chat__message--user {
+    margin-left: auto;
+    border-radius: 14px 14px 4px 14px;
+    background: #e9e4f5;
+}
+
+.ad-astra-chat__message a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #392c6c;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.ad-astra-chat__quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 8px;
+}
+
+.ad-astra-chat__quick-replies button {
+    padding: 8px 10px;
+    border: 1px solid #d8d2e8;
+    border-radius: 999px;
+    background: #fff;
+    color: #392c6c;
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ad-astra-chat__quick-replies button:hover {
+    border-color: #392c6c;
+    background: #f2eff8;
+}
+
+.ad-astra-chat__back {
+    margin-top: 9px;
+    padding: 7px 10px;
+    border: 1px solid #d8d2e8;
+    border-radius: 999px;
+    background: #f8f7fb;
+    color: #392c6c;
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.ad-astra-chat__back:hover {
+    border-color: #392c6c;
+    background: #f2eff8;
+}
+
+.ad-astra-chat__form {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #eeeaf4;
+    background: #fff;
+}
+
+.ad-astra-chat__input {
+    min-width: 0;
+    flex: 1;
+    padding: 11px 12px;
+    border: 1px solid #d8d2e8;
+    border-radius: 11px;
+    color: #30284b;
+    font: inherit;
+    font-size: 13px;
+}
+
+.ad-astra-chat__input:focus {
+    outline: 2px solid #7664a8;
+    outline-offset: 1px;
+}
+
+.ad-astra-chat__send {
+    padding: 0 15px;
+    border: 0;
+    border-radius: 11px;
+    background: #2b2156;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.ad-astra-chat__privacy {
+    margin: 0;
+    padding: 0 12px 10px;
+    background: #fff;
+    color: #6f6a7c;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .ad-astra-chat {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .ad-astra-chat__panel {
+        position: fixed;
+        right: 10px;
+        bottom: 82px;
+        width: calc(100vw - 20px);
+        height: min(600px, calc(100dvh - 102px));
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ad-astra-chat__panel {
+        animation: ad-astra-chat-in .18s ease-out;
+    }
+
+    @keyframes ad-astra-chat-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}

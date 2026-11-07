@@ -1,0 +1,14 @@
+{
+  "name": "ad-astra-chat-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build:site": "node scripts/build-pages.mjs",
+    "deploy:site": "npm run build:site && wrangler pages deploy ../.pages-dist --project-name ad-astra"
+  },
+  "devDependencies": {
+    "wrangler": "^4.36.0"
+  }
+}

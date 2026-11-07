@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+
+    <meta name="theme-color" content="#2B2156">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AD ASTRA">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+
+<title>Puntajes UNAM | AD ASTRA</title>
+    <meta name="description" content="Consulta los puntajes de referencia para las carreras de la UNAM y planea tu preparación con AD ASTRA.">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="stylesheet" href="assets/css/chat.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+</head>
+<body>
+
+<!-- =====================================================
+     ANUNCIO
+====================================================== -->
+
+<div class="announcement">
+
+    GENERACIÓN UNAM 2027 · 
+    <a href="https://wa.me/527221613166"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="inscripciones-link-banner"
+        >INSCRIPCIONES ABIERTAS</a>
+</div>
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <div class="brand">
+            <h1>AD ASTRA</h1>
+        </div>
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                INICIO
+            </a>
+
+            <a href="profesores.html">
+                PROFESORES
+            </a>
+
+            <a
+                href="puntajes.html"
+                class="active"
+            >
+                PUNTAJES UNAM
+            </a>
+
+            <!-- =================================================
+                 AGREGADO: ENLACE A EXAMEN SIMULACRO
+            ================================================== -->
+
+            <a
+                href="simulacros.html"
+            >
+                EXAMEN SIMULACRO
+            </a>
+
+            <a href="#" class="aula-link">
+                AULA VIRTUAL
+            </a>
+
+            <a
+                href="https://wa.me/527221613166"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+            >
+                CONTACTANOS
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="scores-hero">
+
+    <div class="scores-hero-content">
+
+        <span>
+            AD ASTRA
+        </span>
+
+        <h2>
+            PUNTAJES UNAM
+        </h2>
+
+        <p>
+            Consulta los aciertos, planteles, aspirantes y
+            seleccionados de las carreras de la UNAM.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALCULADORA
+====================================================== -->
+
+<main class="scores-section">
+
+    <div class="scores-title">
+
+        <span>
+            CALCULADORA AD ASTRA
+        </span>
+
+        <h2>
+            ¿CUÁNTOS ACIERTOS NECESITAS?
+        </h2>
+
+        <p>
+            Selecciona el área y posteriormente la carrera
+            que deseas consultar.
+        </p>
+
+    </div>
+
+
+    <div class="calculator-card">
+
+        <div class="calculator-top">
+
+            <div class="calculator-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div>
+
+                <span class="calculator-label">
+                    CONSULTA UNAM
+                </span>
+
+                <h2>
+                    PUNTAJE POR CARRERA
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="calculator-description">
+
+            Consulta el puntaje de referencia junto con los
+            planteles, aspirantes y seleccionados registrados
+            para cada carrera.
+
+        </p>
+
+
+        <!-- =================================================
+             FORMULARIO
+        ================================================== -->
+
+        <div class="calculator-form">
+
+            <div class="select-group">
+
+                <label for="area">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    ÁREA
+
+                </label>
+
+                <select id="area">
+
+                    <option value="">
+                        Selecciona un área
+                    </option>
+
+                    <option value="1">
+                        ÁREA 1 — FÍSICO-MATEMÁTICAS E INGENIERÍAS
+                    </option>
+
+                    <option value="2">
+                        ÁREA 2 — BIOLÓGICAS, QUÍMICAS Y DE LA SALUD
+                    </option>
+
+                    <option value="3">
+                        ÁREA 3 — CIENCIAS SOCIALES
+                    </option>
+
+                    <option value="4">
+                        ÁREA 4 — HUMANIDADES Y ARTES
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="select-group">
+
+                <label for="carrera">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    CARRERA
+
+                </label>
+
+                <select
+                    id="carrera"
+                    disabled
+                >
+
+                    <option value="">
+                        Primero selecciona un área
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                id="btnPuntaje"
+                class="score-button"
+                type="button"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                OBTENER PUNTAJE
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             MENSAJE
+        ================================================== -->
+
+        <div
+            id="mensaje"
+            class="calculator-message"
+        ></div>
+
+
+        <!-- =================================================
+             RESULTADO
+        ================================================== -->
+
+        <section
+            id="resultado"
+            class="result-container"
+        >
+
+            <div class="result-header">
+
+                <span>
+                    PUNTAJE REQUERIDO
+                </span>
+
+                <h2 id="nombreCarrera">
+                    —
+                </h2>
+
+                <p id="areaResultado">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="result-summary">
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    <div>
+
+                        <strong id="totalPlanteles">
+                            0
+                        </strong>
+
+                        <span>
+                            PLANTELES
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <strong id="totalAspirantes">
+                            0
+                        </strong>
+
+                        <span>
+                            ASPIRANTES
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                    <div>
+
+                        <strong id="totalSeleccionados">
+                            0
+                        </strong>
+
+                        <span>
+                            SELECCIONADOS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <div class="table-heading">
+
+                    <div>
+
+                        <span>
+                            INFORMACIÓN DE INGRESO
+                        </span>
+
+                        <h3>
+                            Resultados por plantel
+                        </h3>
+
+                    </div>
+
+                    <div class="table-badge">
+                        UNAM
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    PLANTEL
+                                </th>
+
+                                <th>
+                                    ASPIRANTES
+                                </th>
+
+                                <th>
+                                    SELECCIONADOS
+                                </th>
+
+                                <th>
+                                    PUNTAJE
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaResultado">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="score-highlight">
+
+                <div>
+
+                    <span>
+                        MAYOR PUNTAJE DE REFERENCIA
+                    </span>
+
+                    <small>
+                        Entre los planteles mostrados
+                    </small>
+
+                </div>
+
+                <strong id="puntajeGrande">
+                    —
+                </strong>
+
+                <b>
+                    ACIERTOS
+                </b>
+
+            </div>
+
+
+            <div class="result-note">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    Los puntajes son valores de referencia y
+                    pueden cambiar dependiendo del concurso,
+                    la demanda y los lugares disponibles.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         INFORMACIÓN
+    ====================================================== -->
+
+    <section class="scores-information">
+
+        <article class="scores-info-card">
+
+            <div class="info-card-icon">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <h3>
+                ¿QUÉ SIGNIFICA EL PUNTAJE?
+            </h3>
+
+            <p>
+                El puntaje mostrado corresponde a los aciertos
+                registrados como referencia para esa carrera
+                y plantel.
+            </p>
+
+        </article>
+
+
+        <article class="scores-info-card">
+
+            <div class="info-card-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>
+                ASPIRANTES Y SELECCIONADOS
+            </h3>
+
+            <p>
+                Puedes comparar cuántas personas solicitaron
+                ingresar y cuántas fueron seleccionadas.
+            </p>
+
+        </article>
+
+
+        <article class="scores-info-card">
+
+            <div class="info-card-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>
+                CREA TU META
+            </h3>
+
+            <p>
+                Usa el resultado como referencia y busca
+                superar el puntaje durante tus simulacros.
+            </p>
+
+        </article>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <h2>
+        AD ASTRA
+    </h2>
+
+    <p>
+        Preparándote para alcanzar tus metas.
+    </p>
+
+
+    <div class="social-links">
+
+        <a
+            href="https://www.instagram.com/adastra__edu?igsh=MTdycW14b2llazIyNw%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+            href="https://www.tiktok.com/@adastra_edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+        >
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+            href="https://www.youtube.com/channel/UCU4EC6BYhLn3xBswmMWRp9A"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+        >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61591988488380"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+            href="https://wa.me/527221613166"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 AD ASTRA. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<script src="assets/js/puntajes-data.js"></script>
+<script src="assets/js/puntajes.js"></script>
+<script src="assets/js/pwa.js"></script>
+
+<script src="assets/js/chat-config.js"></script>
+<script src="assets/js/chat.js"></script>
+</body>
+</html>

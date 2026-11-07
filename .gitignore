@@ -1,0 +1,19 @@
+# Archivos generados al compilar y publicar
+.pages-dist/
+dist/
+node_modules/
+.netlify/
+
+# Credenciales y estado local del Worker
+worker/node_modules/
+worker/.wrangler/
+worker/.dev.vars
+worker/.env
+
+# Secretos locales
+.env
+.env.*
+!.env.example
+
+# Archivo ajeno al sitio
+extras/
